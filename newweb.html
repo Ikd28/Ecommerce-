@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <script async="" src="https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js"></script>
+    <style>
+        .shopify-buy-modal-is-active {
+            height: 100%;
+            overflow: auto;
+        }
+
+        .shopify-buy-frame {
+            display: inline-block;
+        }
+
+        .shopify-buy-frame iframe {
+            width: 100%;
+            display: block;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .shopify-buy-frame--cart {
+            width: 100%;
+            max-width: 350px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100%;
+            z-index: 2147483647;
+            transform: translateX(100%);
+            -webkit-transform: translateX(100%);
+        }
+
+        .shopify-buy-frame--cart iframe {
+            height: 100%;
+        }
+
+        .shopify-buy-frame--cart.is-initialized {
+            -webkit-transition: all 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: all 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .shopify-buy-frame--cart.is-active {
+            transform: translateX(0);
+            -webkit-transform: translateX(0);
+        }
+
+        .shopify-buy-frame--product {
+            display: block;
+        }
+
+        .shopify-buy-frame--product.shopify-buy__layout-horizontal {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .shopify-buy-frame--product.shopify-buy__layout-horizontal iframe {
+            max-width: 100%
+        }
+
+        @media (min-width: 950px) {
+
+            .shopify-buy-frame--product.shopify-buy__layout-horizontal iframe {
+                    max-width: 950px;
+                    margin-left: auto;
+                    margin-right: auto;
+            }
+        }
+
+        .shopify-buy-frame--toggle {
+            display: inline-block;
+        }
+
+        .shopify-buy-frame--toggle:not(.is-sticky) {
+            overflow: hidden;
+            padding: 5px;
+        }
+
+        .shopify-buy-frame--toggle.is-sticky {
+            display: none;
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            z-index: 2147483645;
+        }
+
+        .shopify-buy-frame--toggle.is-active.is-sticky {
+            display: block;
+        }
+
+        .is-active .shopify-buy-frame--toggle iframe {
+            min-height: 67px;
+        }
+
+        .shopify-buy-frame--productSet {
+            width: 100%;
+        }
+
+        .shopify-buy-frame--modal {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 2147483646;
+            display: none;
+            -webkit-transition: background 300ms ease;
+            transition: background 300ms ease;
+        }
+
+        .shopify-buy-frame--modal iframe {
+            height: 100%;
+            width: 100%;
+            max-width: none;
+        }
+
+        .shopify-buy-frame--modal.is-active {
+            background: rgba(0,0,0,0.6);
+        }
+
+        .shopify-buy-frame--modal.is-block {
+            display: block;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+</head>
+<body>
+    <div id="product-component-1591728659481" class="shopify-buy-frame shopify-buy-frame--product shopify-buy__layout-horizontal">
+        <iframe horizontalscrolling="no" verticalscrolling="no" allowtransparency="true" frameborder="0" scrolling="no" name="frame-product-5275391819934" style="width: 100%; overflow: hidden; border: none; height: 692px;">
+            #document
+                <html class="wf-loading wf-quantico-n4-active wf-montserrat-n4-active">
+                    <head>
+                        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat%7CQuantico" media="all">
+                        <style>
+                            html, body, h1, h2, h3, h4, h5, p {   padding: 0;   margin: 0; } * {   -webkit-box-sizing: border-box;           box-sizing: border-box; } body, html {   min-height: 100%; } html {   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;   font-size: 14px;   line-height: 1.2;   color: #4c4c4c;   text-rendering: optimizeLegibility;   -webkit-font-smoothing: antialiased;   -moz-osx-font-smoothing: grayscale; } select {   text-rendering: auto !important; } ul {   list-style: none;   padding-left: 0;   margin: 0; } img {   display: block;   max-width: 100%; } input {   -webkit-appearance: textfield;   margin: 0; } .clearfix:after {     content: "";     display: table;     clear: both;   } .visuallyhidden {   border: 0;   height: 1px;   margin: -1px;   overflow: hidden;   padding: 0;   position: absolute;   width: 1px; } .component-container {   overflow: hidden; } .shopify-buy__type--center {   text-align: center; } .shopify-buy--visually-hidden {   position: absolute !important;   clip: rect(1px, 1px, 1px, 1px);   padding:0 !important;   border:0 !important;   height: 1px !important;   width: 1px !important;   overflow: hidden; } .shopify-buy__btn {   color: #fff;   font-size: 15px;   background-color: #78b657;   padding: 12px 40px;   letter-spacing: .3px;   display: block;   border-radius: 3px;   cursor: pointer;   -webkit-transition: background 200ms ease;   transition: background 200ms ease;   max-width: 100%;   text-overflow: ellipsis;   overflow: hidden;   line-height: 1.2;   border: 0;   -moz-appearance: none;   -webkit-appearance: none } .shopify-buy__btn:hover,   .shopify-buy__btn:focus {     background-color: #5f9d3e;   } .shopify-buy__btn--parent {   background-color: transparent;   border: 0;   padding: 0;   cursor: pointer } .shopify-buy__btn--parent:hover .product__variant-img, .shopify-buy__btn--parent:focus .product__variant-img {       opacity: .7;     } .shopify-buy__btn--cart-tab {   padding: 5px 11px;   border-radius: 3px 0 0 3px;   position: fixed;   right: 0;   top: 50%;   -webkit-transform: translate(100%, -50%);           transform: translate(100%, -50%);   opacity: 0;   min-width: inherit;   width: auto;   height: auto;   z-index: 2147483647 } .shopify-buy__btn--cart-tab.is-active {     -webkit-transform: translateY(-50%);             transform: translateY(-50%);     opacity: 1;   } .shopify-buy__btn__counter {   display: block;   margin: 0 auto 10px auto;   font-size: 18px; } .shopify-buy__icon-cart--side {   height: 20px;   width: 20px; } .shopify-buy__btn[disabled] {   background-color: #999;   pointer-events: none; } .shopify-buy__btn--close {   position: absolute;   right: 9px;   top: 8px;   font-size: 35px;   color: #767676;   border: none;   background-color: transparent;   -webkit-transition: color 100ms ease, -webkit-transform 100ms ease;   transition: color 100ms ease, -webkit-transform 100ms ease;   transition: transform 100ms ease, color 100ms ease;   transition: transform 100ms ease, color 100ms ease, -webkit-transform 100ms ease;   cursor: pointer;   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;   padding-right: 9px } .shopify-buy__btn--close:hover {     -webkit-transform: scale(1.2);             transform: scale(1.2);     color: hsl(0, 0%, 41.2745098039%);   } @-webkit-keyframes flipIn {   from {     max-height: 0;     -webkit-transform: rotatex(90deg) translatey(-50%);             transform: rotatex(90deg) translatey(-50%);     margin-bottom: -65px;     opacity: 0;   }    to {     max-height: none;     -webkit-transform: none;             transform: none;     margin-bottom: 20px;     opacity: 1;   } } @keyframes flipIn {   from {     max-height: 0;     -webkit-transform: rotatex(90deg) translatey(-50%);             transform: rotatex(90deg) translatey(-50%);     margin-bottom: -65px;     opacity: 0;   }    to {     max-height: none;     -webkit-transform: none;             transform: none;     margin-bottom: 20px;     opacity: 1;   } } @-webkit-keyframes flipOut {   from {     max-height: none;     -webkit-transform: none;             transform: none;     margin-bottom: 20px;     opacity: 1;   }    to {     max-height: 0;     -webkit-transform: rotatex(90deg) translatey(-50%);             transform: rotatex(90deg) translatey(-50%);     margin-bottom: -65px;     opacity: 0;   } } @keyframes flipOut {   from {     max-height: none;     -webkit-transform: none;             transform: none;     margin-bottom: 20px;     opacity: 1;   }    to {     max-height: 0;     -webkit-transform: rotatex(90deg) translatey(-50%);             transform: rotatex(90deg) translatey(-50%);     margin-bottom: -65px;     opacity: 0;   } } .shopify-buy__cart-wrapper {   height: 100%;   padding-left: 10px; } .shopify-buy__cart {   height: 100%;   background-color: #fff;   width: calc(100% - 10px);   position: absolute;   right: 0;   -webkit-box-shadow: -5px 0 5px rgba(0, 0, 0, 0.1);           box-shadow: -5px 0 5px rgba(0, 0, 0, 0.1); } .shopify-buy__cart__header {   padding: 20px;   padding-right: 40px;   position: relative;   z-index: 2147483647;   background-color: inherit; } .shopify-buy__cart__title {   font-size: 18px;   color: #767676;   font-weight: normal;   overflow: hidden;   text-overflow: ellipsis; } .shopify-buy__cart-scroll {   padding: 70px 0 135px 0;   position: absolute;   top: 0;   height: 100%;   width: 100%; } .shopify-buy__cart-scroll--discounts {   padding-bottom: 170px; } .shopify-buy__cart-scroll--cart-note {   padding-bottom: 200px; } .shopify-buy__cart-scroll--cart-note.shopify-buy__cart-scroll--discounts {   padding-bottom: 230px; } .shopify-buy__cart-items {   overflow: hidden;   overflow-y: auto;   height: 100%;   position: relative;   padding: 0 20px 20px;   -webkit-overflow-scrolling: touch;   -webkit-perspective: 400px;           perspective: 400px;   -webkit-perspective-origin: 50% 0px;           perspective-origin: 50% 0px; } .shopify-buy__cart-item {   min-height: 65px;   margin-bottom: 20px;   overflow: hidden;   position: relative;   -webkit-backface-visibility: visible;           backface-visibility: visible;   -webkit-animation: 200ms flipIn forwards;           animation: 200ms flipIn forwards; } .shopify-buy__cart-item.is-hidden {   -webkit-animation-name: flipOut;           animation-name: flipOut; } .shopify-buy__cart-item__image {   width: 65px;   height: 65px;   background-size: contain;   background-repeat: no-repeat;   background-position: center center;   background-color: transparent;   position: absolute;   left: 0;   top: 0; } .shopify-buy__cart-item__title {   font-size: 14px;   margin-left: 80px;   margin-bottom: 3px;   display: block; } .shopify-buy__cart-item__price {   float: right;   font-size: 14px;   font-weight: bold;   line-height: 26px; } .shopify-buy__cart-item__price-and-discounts {   float: right;   text-align: right;   max-width: 100px } .shopify-buy__cart-item__price-and-discounts .shopify-buy__cart-item__price {     float: none;   } .shopify-buy__cart-item__full-price {   font-size: 12px;   line-height: 12px; } .shopify-buy__cart-item__discount {   font-size: 12px;   word-wrap: break-word;   text-transform: uppercase } .shopify-buy__cart-item__discount + .shopify-buy__cart-item__discount {     margin-top: 5px;   } .shopify-buy__cart-item__discount__icon {   width: 12px;   height: 12px;   vertical-align: top;   fill: currentColor; } .shopify-buy__cart-item__variant-title {   margin-left: 80px;   margin-bottom: 10px;   color: #4c4c4c;   font-size: 12px;   max-width: 220px;   overflow: hidden;   text-overflow: ellipsis; } .shopify-buy__cart-bottom {   background-color: #fff;   position: absolute;   width: 100%;   bottom: 0;   padding: 15px 20px 20px 20px; } .shopify-buy__cart__subtotal__text {   text-transform: uppercase;   float: left;   font-size: 11px;   color: #4c4c4c; } .shopify-buy__cart__subtotal__price {   float: right; } .shopify-buy__cart__discount {   display: -webkit-box;   display: -webkit-flex;   display: -ms-flexbox;   display: flex;   margin-bottom: 10px;   color: #4c4c4c; } .shopify-buy__cart__discount__text {   font-size: 11px;   text-transform: uppercase;   margin-right: 10px;   -webkit-box-flex: 1;   -webkit-flex-grow: 1;       -ms-flex-positive: 1;           flex-grow: 1; } .shopify-buy__cart__discount__text__icon {   width: 11px;   height: 11px;   vertical-align: top;   fill: currentColor; } .shopify-buy__cart__discount__amount {   font-size: 12px;   line-height: 12px;   -webkit-flex-shrink: 0;       -ms-flex-negative: 0;           flex-shrink: 0; } .shopify-buy__cart__currency {   font-size: 12px; } .shopify-buy__cart__notice {   font-size: 11px;   clear: both;   padding-top: 10px;   text-align: center;   color: #4c4c4c; } .shopify-buy__cart__note {   clear: both;   padding-top: 10px; } .shopify-buy__cart__note__description {   font-size: 11px;   color: #4c4c4c; } .shopify-buy__cart__note__text-area {   resize: none;   font-size: 11px;   width: 100%;   color: #4c4c4c; } .shopify-buy__cart-empty-text {   padding: 10px 15px;   text-align: center; } .shopify-buy__btn--cart-checkout {   clear: both;   margin-top: 15px;   width: 100%;   padding: 10px 5px;   font-size: 16px; } .shopify-buy__quantity-container {   margin-left: 80px;   margin-right: 100px;   height: 26px;   line-height: 26px; } .shopify-buy__quantity-container.is-loading {   opacity: 0.65;   pointer-events: none; } .shopify-buy__cart-item__quantity-input {   float: left;   background: transparent; } @media (max-width: 330px) {   .shopify-buy__cart-item__price-and-discounts {     max-width: 90px;   }    .shopify-buy__quantity-container {     margin-right: 90px;   } } .shopify-buy__quantity-decrement, .shopify-buy__quantity-increment {   color: #4c4c4c;   display: block;   height: 30px;   float: left;   line-height: 16px;   font-family: monospace;   width: 26px;   padding: 0;   border: none;   background: transparent;   -webkit-box-shadow: none;           box-shadow: none;   cursor: pointer;   font-size: 18px;   text-align: center;   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;   border: 1px solid #767676;   position: relative } .shopify-buy__quantity-decrement svg, .shopify-buy__quantity-increment svg {     width: 14px;     height: 14px;     position: absolute;     top: 50%;     left: 50%;     margin-top: -6px;     margin-left: -7px;     fill: currentColor;   } .shopify-buy__quantity-decrement {   border-radius: 3px 0 0 3px; } .shopify-buy__quantity-increment {   border-radius: 0 3px 3px 0; } .shopify-buy__quantity {   color: black;   width: 45px;   height: 30px;   font-size: 16px;   border: none;   text-align: center;   -webkit-appearance: none;   -moz-appearance: textfield;   display: inline-block;   padding: 0;   border-radius: 0;   border-top: 1px solid #767676;   border-bottom: 1px solid #767676; } input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {   -webkit-appearance: none;   margin: 0; } .shopify-buy__quantity-container.shopify-buy__quantity-with-btns {   overflow: hidden } .shopify-buy__quantity-container.shopify-buy__quantity-with-btns .shopify-buy__quantity {     border-left: 0;     border-right: 0;     float: left;   }  
+                            .shopify-buy__btn.shopify-buy__btn--cart-checkout:hover { color: #ff8900;background-color: #000000; } .shopify-buy__btn.shopify-buy__btn--cart-checkout:focus { background-color: #000000; } .shopify-buy__btn.shopify-buy__btn--cart-checkout { font-family: Quantico, sans-serif;font-weight: bold;font-size: 14px;padding-top: 15px;padding-bottom: 15px;color: #ff8900;background-color: #000000;border-radius: 0px; } .shopify-buy__cart__title { color: #000000; } .shopify-buy__cart__header { color: #000000; } .shopify-buy__cart-items { color: #000000; } .shopify-buy__cart__subtotal__text { color: #000000; } .shopify-buy__cart__subtotal__price { color: #000000; } .shopify-buy__cart__notice { color: #000000; } .shopify-buy__cart__currency { color: #000000; } .shopify-buy__btn--close:hover { color: #000000; } .shopify-buy__btn--close { color: #000000; } .shopify-buy__cart-empty-text { color: #000000; } .shopify-buy__cart__note__description { color: #000000; } .shopify-buy__cart__discount__text { color: #000000; } .shopify-buy__cart__discount__text__icon { fill: #000000; } .shopify-buy__cart__discount__amount { color: #000000; } .shopify-buy__cart-item__variant-title { color: #000000; } .shopify-buy__cart-item__price { color: #000000; } .shopify-buy__cart-item__full-price { color: #000000; } .shopify-buy__cart-item__discount { color: #000000; } .shopify-buy__cart-item__discount__icon { fill: #000000; } .shopify-buy__quantity-container.clearfix { color: #000000; } .shopify-buy__quantity-increment { color: #000000;border-color: #000000; } .shopify-buy__quantity-decrement { color: #000000;border-color: #000000; } .shopify-buy__quantity.shopify-buy__cart-item__quantity-input { color: #000000;border-color: #000000; } .shopify-buy__cart-toggle:hover { background-color: #000000; } .shopify-buy__cart-toggle:focus { background-color: #000000; } .shopify-buy__cart-toggle { font-family: Quantico, sans-serif;font-weight: bold;background-color: #000000; } .shopify-buy__cart-toggle__count:hover { color: #ff8900; } .shopify-buy__cart-toggle__count { font-size: 14px;color: #ff8900; } .shopify-buy__icon-cart__group { fill: #ff8900; }  
+                        </style>
+                    </head>
+                <body>
+                    <div class="has-image shopify-buy__layout-horizontal shopify-buy__product">
+                        <div class="shopify-buy__product-img-wrapper" data-element="product.imageWrapper">
+                            <div class="main-image-wrapper">
+                                <button type="button" class="carousel-button carousel-button--previous">
+                                    Left <!-- Make new src svg arrow button -->
+                                    <img class="carousel-button-arrow" src="//sdks.shopifycdn.com/buy-button/latest/arrow.svg" alt="Carousel Arrow">
+                                </button>
+                                <img class="shopify-buy__product__variant-img" alt="Cali Forest Fire Graphic T-shirt" src="https://cdn.shopify.com/s/files/1/0409/3637/4430/products/shirt2_1000x1500.png?v=1591718078" data-element="product.img">
+                                <button type="button" class="carousel-button carousel-button--next">
+                                    Right <!-- Make new src svg arrow button -->
+                                <img class="carousel-button-arrow" src="//sdks.shopifycdn.com/buy-button/latest/arrow.svg" alt="Carousel Arrow">
+                                </button>
+                            </div>
+                      <div class="shopify-buy__carousel">
+                        <a data-element="product.carouselitem" aria-label="Cali Forest Fire Graphic T-shirt" href="https://cdn.shopify.com/s/files/1/0409/3637/4430/products/shirt2.png?v=1591718078" class="shopify-buy__carousel-item  shopify-buy__carousel-item--selected " data-image-id="Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0SW1hZ2UvMTczMTE3OTUxODM3NzQ=" style="background-image: url(https://cdn.shopify.com/s/files/1/0409/3637/4430/products/shirt2_100x100.png?v=1591718078)"></a>
+                      </div>
+                    </div><h1 class="shopify-buy__product__title" data-element="product.title">Cali Forest Fire Graphic T-shirt</h1><div class="shopify-buy__product__price" data-element="product.prices">
+            <span class="shopify-buy__product__actual-price " data-element="product.price">$130.00</span>
+            
+          </div><div class="shopify-buy__product__variant-selectors" data-element="product.options"><div class="shopify-buy__option-select" data-element="option.option">
+    <label class="shopify-buy__option-select__label visuallyhidden" data-element="option.label">Size</label>
+      <div class="shopify-buy__option-select-wrapper" data-element="option.wrapper">
+      <select class="shopify-buy__option-select__select" name="Size" data-element="option.select">
+          <option selected="" value="XS">XS</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+      </select>
+      <svg class="shopify-buy__select-icon" data-element="option.selectIcon" viewBox="0 0 24 24"><path d="M21 5.176l-9.086 9.353L3 5.176.686 7.647 12 19.382 23.314 7.647 21 5.176z"></path></svg>
+    </div>
+  </div></div><div class="shopify-buy__btn-and-quantity" data-element="product.buttonWithQuantity"><div class="shopify-buy__quantity-container " data-element="product.quantity">
+              <input class="shopify-buy__quantity" type="number" min="0" aria-label="Quantity" value="1" data-element="product.quantityInput">
+           </div><div class="shopify-buy__btn-wrapper" data-element="product.buttonWrapper"><button class="shopify-buy__btn  shopify-buy__beside-quantity" data-element="product.button">Add to cart</button></div></div><div class="shopify-buy__product-description" data-element="product.description"><meta charset="utf-8">
+<h2 class="desc ignore-h2-styles">Description:</h2>
+<h3 class="desc ignore-h3-styles">A graphic t-shirt made from cotton with a 2019 California Forest Fire. The Picture depicts the South fire in Shasta-Trinity National Forest. The blaze was ignited by lightning Sept. 5 and has burned an estimated 5,332 acres.</h3></div></div></body></html>
+        
+        </iframe>
+        
+    
+    </div>
+
+
+
+</body>
+
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+function fun_create_account() {
+    var name = document.getElementById("name");
+    var age = document.getElementById("age");
+    var email = document.getElementById("email");
+    var password = document.getElementById("password");
+
+    const promise = auth.createUser_Name_Age_Email_Password(name.value, age.value, email.value, password.value);
+    promise.catch(e => alert(e.message));
+
+    alert("Thank you for creating a account");
+
+}
+
+
+
+
+
+
+<div class="popup-createaccount" >
+    <div class="popup-createaccount-content" >
+        <div onclick='fun_close_createaccount()' class="close-createaccount">
+            <img src="svg/close-icon.svg" alt="Close-Icon" height=100% width=100% >
+        </div>
+        <img src="svg/user-icon.svg" alt="User-Logo" height=20% width=20% >
+        <input type="text" placeholder="  Name..." id="name">
+        <input type="date" placeholder="  Birthday... ex: 07/30/2001" id="age">
+        <input type="email" placeholder="  Email..." id="email">
+        <input type="password" placeholder="  Password..." id="password">
+        <a href="JavaScript:Void(0);" onclick='fun_create_account()' class="button" >Submit</a>
+    </div>
+</div>
+
+
+
+
+.popup-createaccount{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 400%;
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.popup-createaccount-content input {
+    margin: 20px auto;
+    display: block; 
+    width: 50%;
+    height: 10%;
+    background-color: whitesmoke;
+}
+
+.popup-createaccount-content {
+    width: 30%;
+    height: 10%;
+    background-color: rgb(224, 224, 220);
+    padding: 2%;
+    top: 30%;
+    border-radius: 10px;
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+
+.close-createaccount {
+    position: absolute;
+    top: 4%;
+    right: 2.5%;
+    width: 2.5%;
+    cursor: pointer;
+}
+
+.close-createaccount:hover {
+    transform: rotate(90deg);
+    transition: 1s;
+}
+
+
+
+
