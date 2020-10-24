@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Women Page</title>
+    <link rel="stylesheet" href="css/merch.css" href="https://icons8.com/icon/3686/shopping-bag" href="https://icons8.com/icon/132/search">
+</head>
+<body>
+
+    <header id="navbar">
+        <div class="nav-top">
+            <div class="logo">
+                <a href="index.html"><img id="brand-logo" src="img/logo.png" alt="brand-logo"></a>
+            </div>
+            <div class="search"> 
+                <img id="icon-search" src="https://img.icons8.com/ios/100/000000/search--v1.png">
+            </div>
+            <div class="bag">
+                <img id="icon-bag" src="https://img.icons8.com/ios/100/000000/shopping-bag.png">
+            </div>
+        </div>
+    
+        <nav class="nav-bottom">
+            <div class="links">
+                <ul>
+                        <!-- First dropdown button of side navbar "Exclusive" (main menu)-->
+                    <li>
+                        <button class="btn-dropdown-menu" aria-expanded="false"> <!-- have to implement js for aria-expanded -->
+                            <span class="text">Exclusive</span>
+                        </button>
+                        <div class="nav-submenu">
+                            <ul>
+                                <li><a href="women.html"><span class="text">Women</span></a></li>
+                                <li><a href="men.html"><span class="text">Men</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- Second dropdown button of side navbar "Women" (main menu)-->
+                    <li>
+                        <button class="btn-dropdown-menu" aria-expanded="false"> <!-- have to implement js for aria-expanded -->
+                            <span class="text">Women</span>
+                        </button>
+                        <div class="nav-submenu">
+                            <ul>
+                                <li><a href=""><span class="text">New Collection</span></a></li>
+                                <li><a href=""><span class="text">Permanent Collection</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- Third dropdown button of side navbar "Men" (main menu)-->
+                    <li>
+                        <button class="btn-dropdown-menu" aria-expanded="false"> <!-- have to implement js for aria-expanded -->
+                            <span class="text">Men</span>
+                        </button>
+                        <div class="nav-submenu">
+                            <ul>
+                                <li><a href="#"><span class="text">New Collection</span></a></li>
+                                <li><a href="#"><span class="text">Permanent Collection</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- Forth dropdown button of side navbar "Accessories" (main menu)-->
+                    <li>
+                        <button class="btn-dropdown-menu" aria-expanded="false"> <!-- have to implement js for aria-expanded -->
+                            <span class="text">Accessories</span>
+                        </button>
+                        <div class="nav-submenu">
+                            <ul>
+                                <li><a href="#"><span class="text">Women</span></a></li>
+                                <li><a href="#"><span class="text">Men</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- Link of side navbar "Projects" (main menu)-->
+                    <li><a href="#"><span class="text">Projects</span></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        
+        function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+        }
+    </script>
+    
+    
+    <div class="container">
+        <div class="item-1">
+            <a href=""><img class="merch-img" src="img/fashion.png" alt="item1"></a>
+            <a href=""><p class="txt">Forest Fire Nitted shirt</p></a>
+            <a href=""><p class="txt">Price: $120</p></a>
+        </div>
+        <div class="item-1">
+            <a href=""><img class="merch-img" src="img/fashion.png" alt="item1"></a>
+            <a href=""><p class="txt">Forest Fire Nitted shirt</p></a>
+            <a href=""><p class="txt">Price: $120</p></a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="item-1">
+            <a href=""><img class="merch-img" src="img/fashion.png" alt="item1"></a>
+            <a href=""><p class="txt">Forest Fire Nitted shirt</p></a>
+            <a href=""><p class="txt">Price: $120</p></a>
+        </div>
+        <div class="item-1">
+            <a href=""><img class="merch-img" src="img/fashion.png" alt="item1"></a>
+            <a href=""><p class="txt">Forest Fire Nitted shirt</p></a>
+            <a href=""><p class="txt">Price: $120</p></a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="item-1">
+            <a href=""><img class="merch-img" src="img/fashion.png" alt="item1"></a>
+            <a href=""><p class="txt">Forest Fire Nitted shirt</p></a>
+            <a href=""><p class="txt">Price: $120</p></a>
+        </div>
+        <div class="item-1">
+            <a href=""><img class="merch-img" src="img/fashion.png" alt="item1"></a>
+            <a href=""><p class="txt">Forest Fire Nitted shirt</p></a>
+            <a href=""><p class="txt">Price: $120</p></a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="item-1">
+            <a href=""><img class="merch-img" src="img/fashion.png" alt="item1"></a>
+            <a href=""><p class="txt">Forest Fire Nitted shirt</p></a>
+            <a href=""><p class="txt">Price: $120</p></a>
+        </div>
+        <div class="item-1">
+            <a href=""><img class="merch-img" src="img/fashion.png" alt="item1"></a>
+            <a href=""><p class="txt">Forest Fire Nitted shirt</p></a>
+            <a href=""><p class="txt">Price: $120</p></a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="item-1">
+            <a href=""><img class="merch-img" src="img/fashion.png" alt="item1"></a>
+            <a href=""><p class="txt">Forest Fire Nitted shirt</p></a>
+            <a href=""><p class="txt">Price: $120</p></a>
+        </div>
+        <div class="item-1">
+            <a href=""><img class="merch-img" src="img/fashion.png" alt="item1"></a>
+            <a href=""><p class="txt">Forest Fire Nitted shirt</p></a>
+            <a href=""><p class="txt">Price: $120</p></a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="item-1">
+            <a href=""><img class="merch-img" src="img/fashion.png" alt="item1"></a>
+            <a href=""><p class="txt">Forest Fire Nitted shirt</p></a>
+            <a href=""><p class="txt">Price: $120</p></a>
+        </div>
+        <div class="item-1">
+            <a href=""><img class="merch-img" src="img/fashion.png" alt="item1"></a>
+            <a href=""><p class="txt">Forest Fire Nitted shirt</p></a>
+            <a href=""><p class="txt">Price: $120</p></a>
+        </div>
+    </div>
+    
+    <footer class="footer-flex">
+        <div class="extra">EXTRA
+            <ul class="space">
+                <li class="txt">Email: ****@company.com</li>
+                <li class="txt">Phone: (1)917-843-4388</li>
+            </ul>
+        </div>
+        <div class="client-service">CLIENT SERVICE
+            <ul class="space">
+                <li><a href=""><span class="txt">Contact Us</span></a></li>
+                <li><a href=""><span class="txt">Shipping Services</span></a></li>
+                <li><a href=""><span class="txt">Payment Options</span></a></li>
+                <li><a href=""><span class="txt">FAQs</span></a></li>
+                <li><a href=""><span class="txt">Unsubscribe</span></a></li>
+            </ul>
+        </div>
+        <div class="company">COMPANY
+            <ul class="space">
+                <li><a href=""><span class="txt">Projects</span></a></li>
+                <li><a href=""><span class="txt">Legal</span></a></li>
+                <li><a href=""><span class="txt">Corpartive Information</span></a></li>
+            </ul>
+        </div>
+        <div class="social-media">SOCIAL
+            <ul class="space"> 
+                <li><a href=""><span class="txt">Facebook</span></a></li>
+                <li><a href=""><span class="txt">Twitter</span></a></li>
+                <li><a href=""><span class="txt">Instagram</span></a></li>
+                <li><a href=""><span class="txt">YouTube</span></a></li>
+            </ul>
+        </div> 
+    </footer>
+    
