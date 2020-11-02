@@ -1,0 +1,193 @@
+// Your web app's Firebase configuration
+var firebaseConfig = {
+apiKey: "AIzaSyCy4Dc8tfRrHbUfxy8ofstuoU_Y-mQ7kUs",
+authDomain: "e-commerce-f6be2.firebaseapp.com",
+databaseURL: "https://e-commerce-f6be2.firebaseio.com",
+projectId: "e-commerce-f6be2",
+storageBucket: "e-commerce-f6be2.appspot.com",
+messagingSenderId: "750795228887",
+appId: "1:750795228887:web:68296444c3ddff44b45292",
+measurementId: "G-FPM6KEVLHY"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+
+
+function fun_email_list() {
+firebase.database().ref("Subscriber").set({
+email: document.getElementById("emailList").value
+});
+
+}
+
+const auth = firebase.auth();
+
+
+
+
+
+
+function fun_create_account() {
+var email = document.getElementById("email");
+var password = document.getElementById("password");
+
+const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
+promise.catch(e => alert(e.message));
+
+alert("Thank you for creating a account");
+
+document.querySelector(".popup-createaccount").style.display = "none";
+
+}
+
+function fun_login() {
+var email = document.getElementById("email");
+var password = document.getElementById("password");
+
+const promise = auth.signInWithEmailAndPassword(email.value, password.value);
+promise.catch(e => alert(e.message));
+
+alert("Logged In " + email.value);
+
+document.querySelector(".popup-login").style.display = "none";
+
+}
+
+function fun_logout() {
+auth.signOut();
+alert("Signed Out ");
+}
+
+// -~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~- Navigation Bar -~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~- //
+
+
+
+
+// -~%~-~%~-~%~-~%~- Dropdown BTN -~%~-~%~-~%~-~%~- //
+
+// [1] //
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function fun_dropbtn1() {
+document.getElementById("submenu1").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+if (!event.target.matches('.dropbtn')) {
+var dropdowns = document.getElementsByClassName("dropdown-content");
+var i;
+for (i = 0; i
+< dropdowns.length; i++) {
+var openDropdown = dropdowns[i];
+if (openDropdown.classList.contains('show')) {
+openDropdown.classList.remove('show');
+}
+}
+}
+}
+
+// [2] //
+
+function fun_dropbtn2() {
+document.getElementById("submenu2").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+if (!event.target.matches('.dropbtn')) {
+var dropdowns = document.getElementsByClassName("dropdown-content");
+var i;
+for (i = 0; i < dropdowns.length; i++) {
+var openDropdown = dropdowns[i];
+if (openDropdown.classList.contains('show')) {
+openDropdown.classList.remove('show');
+}
+}
+}
+}
+
+// [3] //
+
+function fun_dropbtn3() {
+document.getElementById("submenu3").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+if (!event.target.matches('.dropbtn')) {
+var dropdowns = document.getElementsByClassName("dropdown-content");
+var i;
+for (i = 0; i < dropdowns.length; i++) {
+var openDropdown = dropdowns[i];
+if (openDropdown.classList.contains('show')) {
+openDropdown.classList.remove('show');
+}
+}
+}
+}
+
+// [4] //
+
+function fun_dropbtn4() {
+document.getElementById("submenu4").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+if (!event.target.matches('.dropbtn')) {
+var dropdowns = document.getElementsByClassName("dropdown-content");
+var i;
+for (i = 0; i < dropdowns.length; i++) {
+var openDropdown = dropdowns[i];
+if (openDropdown.classList.contains('show')) {
+openDropdown.classList.remove('show');
+}
+}
+}
+}
+
+
+
+
+
+
+// -~#~-~#~-~#~-~#~- Checkout System -~#~-~#~-~#~-~#~- //
+
+
+
+
+
+
+
+
+// -~@~-~@~-~@~-~@~- Login / Create Account -~@~-~@~-~@~-~@~- //
+
+
+// Login Form Popup //
+function fun_login_form() {
+document.querySelector(".popup-login").style.display = "flex";
+}
+
+
+function fun_close_login() {
+document.querySelector(".popup-login").style.display = "none";
+}
+
+// Login button //
+
+
+
+
+
+// Create Account Popup //
+function fun_create_account_form() {
+document.querySelector(".popup-login").style.display = "none";
+document.querySelector(".popup-createaccount").style.display = "flex";
+}
+
+function fun_close_create_account() {
+document.querySelector(".popup-createaccount").style.display = "none";
+}
